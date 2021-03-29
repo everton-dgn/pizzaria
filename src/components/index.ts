@@ -1,0 +1,1 @@
+// export {NomeComponent} from './Component'
