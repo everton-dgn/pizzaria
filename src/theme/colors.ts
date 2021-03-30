@@ -1,18 +1,43 @@
 export default {
-  dark500: '#223543',
+  // default
+  primary: '#7f1d1d',
+  secondary: '#34d399',
+  secondaryHover: '#3ce9a9',
+  errorColor: '#f44336',
 
-  light100: '#fff',
-  light200: '#f5f5ff',
-  light300: '#223543',
-  light400: '#dbdfed',
-  light500: '#dbdfed',
+  // textos
+  textDefault: '#374151',
+  textLabel: '#374151',
+  textBtnDefault: '#374151',
+  textPrimary: '#7f1d1d',
+  textMain: '#7f1d1d',
+  textSecondary: '#34d399',
+  textLight: '#fff',
+  textErrorColor: '#f44336',
 
-  blue300: '#B2C7E6',
-  blue600: '#3674e3',
+  // border
+  borderPrimary: '#7f1d1d',
+  borderSecondary: '#34d399',
+  borderlight: '#fff',
 
-  red300: '#f44336',
+  // backgrounds
+  bgDefault: '#f5f5ff',
+  bgError: '#f44336',
+  bgSuccess: '#34d399',
+  bgProgressBar: '#c6c6c6',
 
-  green300: '#4ae36c',
+  // inputs
+  checkboxPrimary: '#7f1d1d',
+  radioPrimary: '#7f1d1d',
 
-  lightTextBtn: '#fff',
+  // buttons
+  btnSecondary: '#34d399',
+
+  // box-shadows
+  boxShadowLight: '#fff',
+  boxShadowDark: '#e0e0ef',
+
+  // Links
+  linkDefault: '#000',
+  linkAuthor: '#ff0'
 }

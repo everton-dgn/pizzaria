@@ -11,4 +11,17 @@ export default {
   textSubtitle2: '1.8rem',
   textSubtitle3: '1.7rem',
   textSubtitle4: '1.6rem'
+  /*
+   titleMain: '30px',
+   titleSection: '22px',
+   titleParagraph: '20px',
+   titleCard: '20px',
+   subtitleCard: '16px',
+   paragraphCard: '16px',
+   textrecommendationCard: '14px',
+   textError: '13px',
+   TextbtnNext: '17px',
+   textCart: '22px',
+   textStep: '20px'
+  */
 }

@@ -10,6 +10,7 @@ export default createGlobalStyle<{ theme: any }>`
     -webkit-font-smoothing: antialiased !important;
     list-style: none !important;
     outline: none;
+    font-family: 'Poppins', 'Arial', sans-serif !important;
   }
 
   html {
@@ -35,8 +36,8 @@ export default createGlobalStyle<{ theme: any }>`
   body,
   html,
   #root {
-    background-color: ${s.light200};
-    color: ${s.dark500};
+    background-color: #f5f5ff;
+    color: #374151;
   }
 
   body, #root, input, select, textarea, button {
@@ -67,16 +68,16 @@ export default createGlobalStyle<{ theme: any }>`
 
   ::-webkit-scrollbar,
   scrollbar-width {
-    width: 0.7rem !important;
+    width: 7px !important;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: ${s.blue300};
-    border-radius: 20rem;
+    background-color: #7f1d1d;
+    border-radius: 20px;
   }
 
   :root {
-    scrollbar-color: ${s.blue300} ${s.light100} !important;
-    scrollbar-width: 0.7rem !important;
+    scrollbar-color: #7f1d1d #f5f5ff !important;
+    scrollbar-width: 7px !important;
   }
 `

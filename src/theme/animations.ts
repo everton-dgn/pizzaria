@@ -49,5 +49,14 @@ export default {
     100% {
       transform: translate3d(0, 0, 0);
     }
+  `,
+
+  bouncedelay: keyframes`
+    0%, 80%, 100% {
+      transform: scale(0.0);
+    }
+    40% {
+      transform: scale(1.0);
+    }
   `
 }
