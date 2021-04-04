@@ -2,13 +2,18 @@ import React from 'react'
 import * as S from 'components/BtnNext/styles'
 import Link from 'next/link'
 
-export const BtnNext = ({ route }: any) => {
+interface Props {
+  route: any
+  text?: string
+}
+
+export const BtnNext = ({ route, text }: Props) => {
   return (
     <>
-      <S.ContainerBtn>
+      <S.ContainerBtn center={text}>
         <Link href={route}>
           <a>
-            <S.BtnNext>Avançar</S.BtnNext>
+            <S.BtnNext>{text || 'Avançar'}</S.BtnNext>
           </a>
         </Link>
       </S.ContainerBtn>

@@ -1,11 +1,12 @@
 import * as S from 'components/TitleSection/styles'
+import { c } from 'theme'
 
 export const TitleSection = ({ title }: any) => {
   return (
     <>
-      <div>
+      <c.Container>
         <S.TitleSection>{title}</S.TitleSection>
-      </div>
+      </c.Container>
     </>
   )
 }

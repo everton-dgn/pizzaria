@@ -1,4 +1,5 @@
 import * as S from 'components/Header/styles'
+import Link from 'next/link'
 
 export const Header = () => {
   return (
@@ -7,9 +8,13 @@ export const Header = () => {
         <S.Nav>
           <S.ContainerCenter>
             <div>
-              <S.Logo>
-                Pizzaria <em>Toffanetto</em>
-              </S.Logo>
+              <Link href="/">
+                <a>
+                  <S.Logo>
+                    Pizzaria <em>Toffanetto</em>
+                  </S.Logo>
+                </a>
+              </Link>
             </div>
           </S.ContainerCenter>
         </S.Nav>

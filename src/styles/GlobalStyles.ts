@@ -16,26 +16,26 @@ export default createGlobalStyle<{ theme: any }>`
   html {
     font-size: 62.5%;
 
-    ${s.breakMax('120rem')} {
+    ${s.breakMax(120)} {
       font-size: 59.5%;
     }
 
-    ${s.breakMax('99.2rem')} {
+    ${s.breakMax(99.2)} {
       font-size: 56.5%;
     }
 
-    ${s.breakMax('76.8rem')} {
+    ${s.breakMax(76.8)} {
       font-size: 53.5%;
     }
 
-    ${s.breakMax('57.6rem')} {
+    ${s.breakMax(57.6)} {
       font-size: 50.5%;
     }
   }
 
   body,
   html,
-  #root {
+  #__next {
     background-color: #f5f5ff;
     color: #374151;
   }
@@ -49,13 +49,13 @@ export default createGlobalStyle<{ theme: any }>`
     border-radius: 0.6rem;
   }
 
-  #root {
+  #__next {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100vh;
   }
-
+  
   a,
   a:active {
     color: inherit;
@@ -68,16 +68,16 @@ export default createGlobalStyle<{ theme: any }>`
 
   ::-webkit-scrollbar,
   scrollbar-width {
-    width: 7px !important;
+    width: 0.7rem !important;
   }
 
   ::-webkit-scrollbar-thumb {
     background-color: #7f1d1d;
-    border-radius: 20px;
+    border-radius: 2rem;
   }
 
   :root {
     scrollbar-color: #7f1d1d #f5f5ff !important;
-    scrollbar-width: 7px !important;
+    scrollbar-width: 0.7rem !important;
   }
 `

@@ -3,8 +3,9 @@ import { TitleSection, Steps, Cart } from 'components'
 import * as S from 'styles/pages/success'
 // import Router from 'next/router'
 import { DataContext } from 'hooks/UseContext'
+import { c } from 'theme'
 
-export const Sucesso = () => {
+const Sucesso = () => {
   const {
     pizza1,
     pizza2,
@@ -54,42 +55,37 @@ export const Sucesso = () => {
       <Steps activeStep={[true, true, true, true, true]} />
       <TitleSection title="Confirmar Envio do pedido" />
       <Cart />
-      <div>
-        <div>
-          <S.TitleComponent>Resumo do Pedido</S.TitleComponent>
-          <S.ContainerSuccess>
-            <S.Card>
-              <S.CardContent>
-                <S.ContainerList>
-                  <S.Title>Sabor(es):</S.Title>
-                  <ul>
-                    <li>{pizza1.checked === true && '• ' + pizza1.name}</li>
-                    <li>{pizza2.checked === true && '• ' + pizza2.name}</li>
-                    <li>{pizza3.checked === true && '• ' + pizza3.name}</li>
-                    <li>{pizza4.checked === true && '• ' + pizza4.name}</li>
-                  </ul>
-                  <br />
-                  <S.Title>Tamanho:</S.Title>
-                  <li>{pizza1.checked === true && '• ' + pizza1.size}</li>
-                  <li>{pizza2.checked === true && '• ' + pizza2.size}</li>
-                  <li>{pizza3.checked === true && '• ' + pizza3.size}</li>
-                  <li>{pizza4.checked === true && '• ' + pizza4.size}</li>
-                  <br />
-                  <S.Title>Adiconais:</S.Title>
-                  <ul>
-                    <li>{adBacon && '• ' + adBacon + ' x Bacon'}</li>
-                    <li>
-                      {adCalabreza && '• ' + adCalabreza + ' x Calabreza'}
-                    </li>
-                    <li>
-                      {adMussarela && '• ' + adMussarela + ' x Mussarela'}
-                    </li>
-                    {/* <li>{adPalmito && '• ' + adPalmito + ' x Palmito'}</li> */}
-                  </ul>
-                </S.ContainerList>
-                <S.ContainerList>
-                  <S.Title>Nome Completo:</S.Title>
-                  {/* <p>{formNome}</p>
+      <c.Container>
+        <S.TitleComponent>Resumo do Pedido</S.TitleComponent>
+        <S.ContainerSuccess>
+          <S.Card>
+            <S.CardContent>
+              <S.ContainerList>
+                <S.Title>Sabor(es):</S.Title>
+                <ul>
+                  <li>{pizza1.checked === true && '• ' + pizza1.name}</li>
+                  <li>{pizza2.checked === true && '• ' + pizza2.name}</li>
+                  <li>{pizza3.checked === true && '• ' + pizza3.name}</li>
+                  <li>{pizza4.checked === true && '• ' + pizza4.name}</li>
+                </ul>
+                <br />
+                <S.Title>Tamanho:</S.Title>
+                <li>{pizza1.checked === true && '• ' + pizza1.size}</li>
+                <li>{pizza2.checked === true && '• ' + pizza2.size}</li>
+                <li>{pizza3.checked === true && '• ' + pizza3.size}</li>
+                <li>{pizza4.checked === true && '• ' + pizza4.size}</li>
+                <br />
+                <S.Title>Adiconais:</S.Title>
+                <ul>
+                  <li>{adBacon && '• ' + adBacon + ' x Bacon'}</li>
+                  <li>{adCalabreza && '• ' + adCalabreza + ' x Calabreza'}</li>
+                  <li>{adMussarela && '• ' + adMussarela + ' x Mussarela'}</li>
+                  {/* <li>{adPalmito && '• ' + adPalmito + ' x Palmito'}</li> */}
+                </ul>
+              </S.ContainerList>
+              <S.ContainerList>
+                <S.Title>Nome Completo:</S.Title>
+                {/* <p>{formNome}</p>
                   <br />
                   <S.Title>E-mail:</S.Title>
                   <p>{formEmail}</p>
@@ -105,27 +101,28 @@ export const Sucesso = () => {
                   <p>
                     {formCidade}, {formEstado}. {formCep}
                   </p> */}
-                </S.ContainerList>
-                <S.ContainerList>
-                  <S.Title>Recomendação do dia?</S.Title>
-                  {pizza1.checked === pizza1.recommended && <p>Não</p>}
-                  {pizza1.checked !== pizza1.recommended && (
-                    <p>
-                      • Sim. Você acumulou
-                      <b className="text-green-400 mx-2">+{pizza1.point}</b>
-                      pontos para a próxima compra!
-                    </p>
-                  )}
-                </S.ContainerList>
-              </S.CardContent>
+              </S.ContainerList>
+              <S.ContainerList>
+                <S.Title>Recomendação do dia?</S.Title>
+                {pizza1.checked === pizza1.recommended && <p>Não</p>}
+                {pizza1.checked !== pizza1.recommended && (
+                  <p>
+                    • Sim. Você acumulou
+                    <b className="text-green-400 mx-2">+{pizza1.point}</b>
+                    pontos para a próxima compra!
+                  </p>
+                )}
+              </S.ContainerList>
+            </S.CardContent>
 
-              <S.BtnSend onClick={sendZap}>
-                Enviar pedido pelo WhatsApp <S.Zap />
-              </S.BtnSend>
-            </S.Card>
-          </S.ContainerSuccess>
-        </div>
-      </div>
+            <S.BtnSend onClick={sendZap}>
+              Enviar pedido pelo WhatsApp <S.Zap />
+            </S.BtnSend>
+          </S.Card>
+        </S.ContainerSuccess>
+      </c.Container>
     </>
   )
 }
+
+export default Sucesso

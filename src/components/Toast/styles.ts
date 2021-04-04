@@ -1,15 +1,12 @@
 import styled from 'styled-components'
 import { s } from 'theme'
-import {
-  WarningRounded as WarningRoundedIcon,
-  CheckCircleRounded as CheckCircleRoundedIcon
-} from '@material-ui/icons'
+import { ExclamationTriangle, CheckCircleFill } from '@styled-icons/bootstrap'
 import { ToastContainer } from 'react-toastify'
 
 export const ToastAlertContainer = styled(ToastContainer)`
   .Toastify__toast--error {
     background-color: #fff;
-    //border-left: 5px solid ${s.bgError};
+    //border-left: 0.5rem solid ${s.bgError};
 
     b {
       color: ${s.textErrorColor};
@@ -22,7 +19,7 @@ export const ToastAlertContainer = styled(ToastContainer)`
 
   .Toastify__toast--success {
     background-color: #fff;
-    //border-left: 5px solid ${s.bgSuccess};
+    //border-left: 0.5rem solid ${s.bgSuccess};
 
     b {
       color: ${s.textSecondary};
@@ -35,7 +32,7 @@ export const ToastAlertContainer = styled(ToastContainer)`
 
   .Toastify__progress-bar {
     //background: ${s.bgProgressBar};
-    height: 4px;
+    height: 0.4rem;
   }
 
   .Toastify__toast-body {
@@ -45,26 +42,25 @@ export const ToastAlertContainer = styled(ToastContainer)`
     color: #374151;
 
     b {
-      margin-right: 5px;
+      margin-right: 0.5rem;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 1.8rem;
       text-transform: uppercase;
     }
   }
 `
-
-export const IconError = styled(WarningRoundedIcon)`
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  margin-top: 2px;
+export const IconError = styled(ExclamationTriangle)`
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
   color: ${s.errorColor};
 `
 
-export const IconSuccess = styled(CheckCircleRoundedIcon)`
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  margin-top: 2px;
+export const IconSuccess = styled(CheckCircleFill)`
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
   color: ${s.textSecondary};
 `

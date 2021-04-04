@@ -5,18 +5,18 @@ import { Form } from '@unform/web'
 export const TitleComponent = styled.h1`
   color: #7f1d1d;
   font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  margin-bottom: 3rem;
   width: fit-content;
 
   &:after {
     content: '';
     display: block;
-    height: 5px;
+    height: 0.5rem;
     width: 30%;
     background-color: #34d399;
-    margin-top: 5px;
-    border-radius: 10px;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
   }
 `
 
@@ -30,11 +30,11 @@ export const Card = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 30px 20px;
-  border-radius: 10px;
-  margin-bottom: 50px;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
   width: 100%;
-  box-shadow: -6px -6px 16px 0 #fff, 6px 6px 16px 0 #e0e0ef;
+  box-shadow: -0.6rem -0.6rem 1.6rem 0 #fff, 0.6rem 0.6rem 1.6rem 0 #e0e0ef;
 `
 
 export const FormFields = styled(Form)`
@@ -47,7 +47,7 @@ export const ContentForm = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-flow: dense;
-  column-gap: 20px;
+  column-gap: 2rem;
   width: 100%;
 
   div {
@@ -58,13 +58,13 @@ export const ContentForm = styled.div`
     margin-top: 0;
   }
 
-  ${s.break(600)} {
+  ${s.break(60)} {
     div {
       grid-column: span 6;
     }
   }
 
-  ${s.break(1000)} {
+  ${s.break(100)} {
     div {
       grid-column: span 4;
     }
@@ -72,14 +72,14 @@ export const ContentForm = styled.div`
 `
 
 export const BtnSend = styled.button`
-  font-size: 18px;
+  font-size: 1.8rem;
   text-transform: uppercase;
   background-color: #34d399;
   width: fit-content;
-  padding: 10px 70px;
-  margin: 16px auto 0 auto;
+  padding: 1rem 7rem;
+  margin: 1.6rem auto 0 auto;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 1rem;
   transition: background-color 0.2s linear;
 
   &:hover {

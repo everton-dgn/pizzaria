@@ -4,18 +4,18 @@ import { s } from 'theme'
 export const TitleComponent = styled.h1`
   color: #7f1d1d;
   font-weight: 900;
-  font-size: 22px;
-  margin-bottom: 30px;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
   width: fit-content;
 
   &:after {
     content: '';
     display: block;
-    height: 5px;
+    height: 0.5rem;
     width: 30%;
     background-color: #34d399;
-    margin-top: 5px;
-    border-radius: 10px;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
   }
 `
 
@@ -29,22 +29,22 @@ export const ContainerSize = styled.section`
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  box-shadow: -6px -6px 16px 0 #fff, 6px 6px 16px 0 #e0e0ef;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  box-shadow: -0.6rem -0.6rem 1.6rem 0 #fff, 0.6rem 0.6rem 1.6rem 0 #e0e0ef;
   width: 100%;
 
-  ${s.break(460)} {
-    width: calc(50% - 10px);
+  ${s.break(35)} {
+    width: calc(50% - 1rem);
   }
 
-  ${s.break(870)} {
-    width: calc(25% - 20px);
+  ${s.break(87)} {
+    width: calc(25% - 2rem);
   }
 
-  ${s.break(1280)} {
-    width: calc(25% - 30px);
+  ${s.break(130)} {
+    width: calc(25% - 3rem);
   }
 `
 
@@ -66,7 +66,7 @@ export const Title = styled.h3`
   flex-direction: row;
   font-weight: bold;
   color: #7f1d1d;
-  font-size: 20px;
+  font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 0;
   justify-content: center;
@@ -75,10 +75,10 @@ export const Title = styled.h3`
 
 export const SubTitle = styled.h4`
   color: #34d399;
-  font-size: 17px;
+  font-size: 1.7rem;
   font-weight: 500;
-  margin-bottom: -5px;
-  margin-top: 10px;
+  margin-bottom: -0.5rem;
+  margin-top: 1rem;
 `
 
 export const ContainerRadio = styled.div`
@@ -91,9 +91,9 @@ export const ContainerRadio = styled.div`
 export const RadioContent = styled.label`
   display: flex;
   flex-direction: column;
-  border: 2px solid #34d399;
-  border-radius: 10px;
-  padding: 15px 20px;
+  border: 0.2rem solid #34d399;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
   width: 100%;
 
   .MuiIconButton-root {
@@ -102,5 +102,5 @@ export const RadioContent = styled.label`
 `
 
 export const RadioLabel = styled.div`
-  margin: -5px auto -15px auto;
+  margin: -0.5rem auto 0 auto;
 `

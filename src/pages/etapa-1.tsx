@@ -1,30 +1,33 @@
 import axios from 'axios'
 import { TitleSection, Steps, Cart, Flavor, BtnNext } from 'components'
+import { c } from 'theme'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-export const Etapa1 = ({ dataApi }: any) => {
+const Etapa1 = ({
+  dataApi
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Steps activeStep={[true, false, false, false, false]} />
       <TitleSection title="Selecione o sabor da pizza" />
       <Cart />
-      <div>
-        <div>
-          <Flavor data={dataApi.pizzas} />
-        </div>
-      </div>
-      <BtnNext route={'/etapa-2'} />
+      <c.Container>
+        <Flavor data={dataApi.pizzas} />
+        <BtnNext route={'/etapa-2'} />
+      </c.Container>
     </>
   )
 }
 
-export async function getStaticProps() {
-  const res = await axios.get(
-    'https://pizzaria-toffanetto.vercel.app/api/pizzas'
-  )
+export const getStaticProps: GetStaticProps = async context => {
+  const res = await axios.get('http://localhost:3000/api/pizzas')
   const dataApi = res.data[0]
+
   return {
     props: {
       dataApi
     }
   }
 }
+
+export default Etapa1

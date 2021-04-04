@@ -28,7 +28,7 @@ export default {
       opacity: 1;
     }
     100% {
-      transform: translateY(-150px);
+      transform: translateY(-15rem);
       opacity: 0;
     }
   `,

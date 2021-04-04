@@ -1,6 +1,6 @@
 import { useRef, useContext } from 'react'
 import * as S from 'components/Forms/FormData/styles'
-import Input from 'components/Forms/Input'
+import { Input } from 'components'
 import { Scope } from '@unform/core'
 import * as Yup from 'yup'
 import Router from 'next/router'

@@ -4,18 +4,18 @@ import { s } from 'theme'
 export const TitleComponent = styled.h1`
   color: #7f1d1d;
   font-weight: 900;
-  font-size: 22px;
-  margin-bottom: 16px;
+  font-size: 2.2rem;
+  margin-bottom: 1.6rem;
   width: fit-content;
 
   &:after {
     content: '';
     display: block;
-    height: 5px;
+    height: 0.5rem;
     width: 30%;
     background-color: #34d399;
-    margin-top: 5px;
-    border-radius: 10px;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
   }
 `
 
@@ -24,38 +24,38 @@ export const ContainerCard = styled.section`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 3rem;
 `
 
 export const Card = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: -6px -6px 16px 0 #fff, 6px 6px 16px 0 #e0e0ef;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: -0.6rem -0.6rem 1.6rem 0 #fff, 0.6rem 0.6rem 1.6rem 0 #e0e0ef;
   width: 100%;
 
-  ${s.break(540)} {
-    padding: 16px 20px;
+  ${s.break(54)} {
+    padding: 1.6rem 2rem;
   }
 
-  ${s.break(700)} {
-    width: calc(50% - 10px);
+  ${s.break(70)} {
+    width: calc(50% - 1rem);
   }
 
-  ${s.break(1280)} {
-    width: calc(50% - 20px);
-    margin-bottom: 30px;
+  ${s.break(130)} {
+    width: calc(50% - 2rem);
+    margin-bottom: 3rem;
   }
 `
 
 export const ContainerImg = styled.div`
   overflow: hidden;
-  border-radius: 10px;
-  width: 90px;
-  min-width: 90px;
-  height: 90px;
+  border-radius: 1rem;
+  width: 9rem;
+  min-width: 9rem;
+  height: 9rem;
 
   img {
     object-fit: cover;
@@ -67,23 +67,23 @@ export const ContainerImg = styled.div`
 export const ContainerInfo = styled.div<{ bonus: any }>`
   display: flex;
   flex-direction: column;
-  margin-left: 12px;
+  margin-left: 1.2rem;
   width: 100%;
   justify-content: start;
 
   ${props =>
     props.bonus === 'true' &&
     css`
-      border: 2px solid #7f1d1d;
-      border-radius: 8px;
-      padding: 1px 5px 5px 5px;
+      border: 0.2rem solid #7f1d1d;
+      border-radius: 0.8rem;
+      padding: 0.1rem 0.5rem 0.5rem 0.5rem;
     `};
 
   em {
     display: none;
     color: #7f1d1d;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 1rem;
     ${props =>
       props.bonus === 'true' &&
       css`
@@ -91,8 +91,8 @@ export const ContainerInfo = styled.div<{ bonus: any }>`
       `};
   }
 
-  ${s.break(540)} {
-    font-size: 12px;
+  ${s.break(54)} {
+    font-size: 1.2rem;
   }
 `
 
@@ -107,38 +107,38 @@ export const Title = styled.h3`
   flex-direction: row;
   font-weight: bold;
   color: #7f1d1d;
-  font-size: 15px;
+  font-size: 1.5rem;
   text-transform: uppercase;
   margin: 0;
   align-items: baseline;
 
   b {
-    margin-right: 7px;
+    margin-right: 0.7rem;
   }
 
-  ${s.break(540)} {
-    font-size: 18px;
+  ${s.break(54)} {
+    font-size: 1.8rem;
   }
 `
 
 export const SubTitle = styled.h4`
   color: #34d399;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
 
-  ${s.break(540)} {
-    font-size: 14px;
+  ${s.break(54)} {
+    font-size: 1.4rem;
   }
 `
 
 export const Text = styled.p`
-  font-size: 13px;
+  font-size: 1.3rem;
   margin: 0;
   line-height: 1.2;
 
-  ${s.break(540)} {
-    font-size: 15px;
+  ${s.break(54)} {
+    font-size: 1.5rem;
     line-height: 1.5;
   }
 `
@@ -146,7 +146,7 @@ export const Text = styled.p`
 export const ContainerCheckbox = styled.div`
   display: flex;
   height: fit-content;
-  margin: auto 5px auto -10px;
+  margin: auto 0.5rem auto -1rem;
 
   .MuiIconButton-root {
     color: #7f1d1d;

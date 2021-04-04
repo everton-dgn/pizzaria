@@ -5,7 +5,7 @@ export const ContainerInput = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 `
 
 export const WrapperInput = styled.div<{ error: any }>`
@@ -15,9 +15,9 @@ export const WrapperInput = styled.div<{ error: any }>`
   label {
     color: ${props => (props.error?.length > 0 ? s.errorColor : '#a0a6c6')};
     position: absolute;
-    font-size: 15px;
-    margin: 14px 14px 13px 15px;
-    border-radius: 4px;
+    font-size: 1.5rem;
+    margin: 1.4rem 1.4rem 1.3rem 1.5rem;
+    border-radius: 0.4rem;
     background-color: ${s.bgDefault};
     cursor: unset;
     z-index: 0;
@@ -25,30 +25,31 @@ export const WrapperInput = styled.div<{ error: any }>`
   }
 
   input {
-    border-radius: 10px;
-    box-shadow: inset -3px -3px 9px 0 #fff, inset 3px 3px 9px 0 #e0e0ef;
-    border: 1.5px solid
+    border-radius: 1rem;
+    box-shadow: inset -0.3rem -0.3rem 0.9rem 0 #fff,
+      inset 0.3rem 0.3rem 0.9rem 0 #e0e0ef;
+    border: 0.15rem solid
       ${props => (props.error?.length > 0 ? s.errorColor : 'transparent')};
     outline: none;
-    padding: 13px 14px;
+    padding: 1.3rem 1.4rem;
     background-color: ${s.bgDefault};
-    font-size: 15px;
+    font-size: 1.5rem;
     z-index: 1;
     color: ${props => (props.error?.length > 0 ? s.errorColor : s.textLabel)};
     transition: all 0.2s ease-in-out;
 
     &::placeholder {
-      font-size: 15px;
+      font-size: 1.5rem;
       color: ${props => (props.error?.length > 0 ? s.errorColor : '#a0a6c6')};
     }
 
     &:hover {
-      border: 1.5px solid
+      border: 0.15rem solid
         ${props => (props.error?.length > 0 ? s.errorColor : s.borderlight)};
     }
 
     &:focus {
-      border: 1.5px solid
+      border: 0.15rem solid
         ${props => (props.error?.length > 0 ? s.errorColor : s.borderSecondary)};
     }
 
@@ -58,9 +59,9 @@ export const WrapperInput = styled.div<{ error: any }>`
 
     &:focus + label,
     &:not(:placeholder-shown) + label {
-      font-size: 11.5px;
+      font-size: 1.15rem;
       color: ${props => (props.error?.length > 0 ? s.errorColor : s.textLabel)};
-      margin-top: -18px;
+      margin-top: -1.8rem;
       margin-left: 0;
       cursor: default;
       z-index: 2;
@@ -68,9 +69,9 @@ export const WrapperInput = styled.div<{ error: any }>`
 
     &:-webkit-autofill:focus + label,
     &:-webkit-autofill:not(:placeholder-shown) + label {
-      font-size: 11.5px;
+      font-size: 1.15rem;
       color: ${props => (props.error?.length > 0 ? s.errorColor : s.textLabel)};
-      margin-top: -18px;
+      margin-top: -1.8rem;
       margin-left: 0;
       cursor: default;
       z-index: 2;
@@ -82,7 +83,7 @@ export const MsgError = styled.small<{ error: any }>`
   display: flex;
   color: ${s.errorColor};
   justify-content: flex-end;
-  font-size: 11.5px;
-  height: 13px;
+  font-size: 1.15rem;
+  height: 1.3rem;
   visibility: ${props => (props.error?.length > 0 ? 'visible' : 'hidden')};
 `

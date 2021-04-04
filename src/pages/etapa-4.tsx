@@ -1,4 +1,5 @@
 import { TitleSection, Steps, Cart, FormData } from 'components'
+import { c } from 'theme'
 
 export const Etapa4 = () => {
   return (
@@ -6,11 +7,11 @@ export const Etapa4 = () => {
       <Steps activeStep={[true, true, true, true, false]} />
       <TitleSection title="Preencha com seus dados" />
       <Cart />
-      <div>
-        <div>
-          <FormData />
-        </div>
-      </div>
+      <c.Container>
+        <FormData />
+      </c.Container>
     </>
   )
 }
+
+export default Etapa4

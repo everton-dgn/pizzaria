@@ -12,7 +12,7 @@
     left: 0;
 
     width: 100%;
-    height: 4px;
+    height: 0.4rem;
 }
 
 /* Fancy green effect */
@@ -20,14 +20,14 @@
     display: block;
     position: absolute;
     right: 0;
-    width: 100px;
+    width: 10rem;
     height: 100%;
-    box-shadow: 0 0 10px #34d399, 0 0 5px #34d399;
+    box-shadow: 0 0 1rem #34d399, 0 0 0.5rem #34d399;
     opacity: 1;
 
-    -webkit-transform: rotate(3deg) translate(0px, -4px);
-    -ms-transform: rotate(3deg) translate(0px, -4px);
-    transform: rotate(3deg) translate(0px, -4px);
+    -webkit-transform: rotate(3deg) translate(0, -0.4rem);
+    -ms-transform: rotate(3deg) translate(0, -0.4rem);
+    transform: rotate(3deg) translate(0, -0.4rem);
 }
 
 /* Remove these to get rid of the spinner */
@@ -35,18 +35,18 @@
     display: block;
     position: fixed;
     z-index: 1031;
-    top: calc(50vh - 30px);
-    left: calc(50% - 30px);
+    top: calc(50vh - 3rem);
+    left: calc(50% - 3rem);
 }
 
 #nprogress .spinner-icon {
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
     box-sizing: border-box;
     background-color: #ffffffe6;
-    box-shadow: 0 0 100px 100px #ffffffe6;
+    box-shadow: 0 0 10rem 10rem #ffffffe6;
 
-    border: solid 2px transparent;
+    border: solid 0.2rem transparent;
     border-top-color: #34d399;
     border-left-color: #34d399;
     border-radius: 50%;
