@@ -1,6 +1,6 @@
-<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/pizzaria-toffanetto?style=plastic)</a>
-![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/pizzaria-toffanetto?style=plastic)
-![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/pizzaria-toffanetto?color=yellow&style=plastic)
+<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/pizzaria_toffanetto?style=plastic)</a>
+![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/pizzaria_toffanetto?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/pizzaria_toffanetto?color=yellow&style=plastic)
 
 <h1 align="center">PROJETO PIZZARIA TOFFANETTO</h1>
 
@@ -21,9 +21,9 @@
 
 # :camera_flash: Screenshots do Projeto
 
-![Imagem do projeto](https://raw.githubusercontent.com/everton-dgn/pizzaria-toffanetto/master/screenshots/light.jpg)
+![Imagem do projeto](https://raw.githubusercontent.com/everton-dgn/pizzaria_toffanetto/master/screenshots/light.jpg)
 
-![Imagem do projeto](https://raw.githubusercontent.com/everton-dgn/pizzaria-toffanetto/master/screenshots/mobi.png)
+![Imagem do projeto](https://raw.githubusercontent.com/everton-dgn/pizzaria_toffanetto/master/screenshots/mobi.png)
 
 <br />
 
@@ -80,13 +80,13 @@ Este projeto tem o objetivo de agilizar o processo do pedido de pizzas, proporci
 1. Abra o terminal na pasta desejada para clonar o repositório e execute o comando:
 
 ```bash
-git clone https://github.com/everton-dgn/pizzaria-toffanetto
+git clone https://github.com/everton-dgn/pizzaria_toffanetto.git
 ```
 
 2. Depois de concluído, execute os seguintes comandos para iniciar o server e será aberto no seu navegador uma aba com o projeto já funcionando:
 
 ```bash
-cd pizzaria-toffanetto/
+cd pizzaria_toffanetto/
 ```
 
 Para instalar as dependências:
