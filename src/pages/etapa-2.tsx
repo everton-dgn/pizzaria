@@ -1,15 +1,11 @@
-import { useContext } from 'react'
-import { TitleSection, Steps, Cart, Size, BtnNext } from 'components'
+import { TitleSection, Steps, Cart, Size } from 'components'
 import axios from 'axios'
-import { DataContext } from 'hooks/UseContext'
 import { c } from 'theme'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 const Etapa2 = ({
   dataApi
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { cart } = useContext(DataContext)
-
   return (
     <>
       <Steps activeStep={[true, true, false, false, false]} />
@@ -17,7 +13,6 @@ const Etapa2 = ({
       <Cart />
       <c.Container>
         <Size data={dataApi.pizzas} />
-        <BtnNext route={cart !== undefined ? '/etapa-3' : ''} />
       </c.Container>
     </>
   )

@@ -19,6 +19,22 @@ const Sucesso = () => {
     formData
   } = useContext(DataContext)
 
+  const verifyRecommendation = [
+    pizza1.checked === JSON.parse(pizza1.recommended) &&
+      pizza1.checked === true,
+    pizza2.checked === JSON.parse(pizza2.recommended) &&
+      pizza2.checked === true,
+    pizza3.checked === JSON.parse(pizza3.recommended) &&
+      pizza3.checked === true,
+    pizza4.checked === JSON.parse(pizza4.recommended) && pizza4.checked === true
+  ]
+
+  console.log('resultado1', pizza1.recommended)
+  console.log('resultado2', pizza2.recommended)
+  console.log('resultado3', pizza3.recommended)
+  console.log('resultado4', pizza4.recommended)
+  console.log(verifyRecommendation)
+
   const sendZap = async () => {
     await Router.push(
       `https://api.whatsapp.com/send?phone=55${
@@ -109,15 +125,14 @@ const Sucesso = () => {
               </S.ContainerList>
               <S.ContainerList>
                 <S.Title>Recomendação do dia?</S.Title>
-                {pizza1.checked === pizza1.recommended && (
-                  <p>• Não selecionada! 😐</p>
-                )}
-                {pizza1.checked !== pizza1.recommended && (
+                {verifyRecommendation.includes(true) ? (
                   <p>
                     • Sim! 😀. Você selecionou a recomendação do dia e acumulou
                     <b>{` +${pizza1.point} `}</b>
                     pontos para a próxima compra!
                   </p>
+                ) : (
+                  <p>• Não selecionada! 😐</p>
                 )}
               </S.ContainerList>
             </S.CardContent>

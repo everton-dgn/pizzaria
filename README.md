@@ -1,8 +1,8 @@
-<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/pomodoro-react?style=plastic)</a>
-![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/pomodoro-react?style=plastic)
-![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/pomodoro-react?color=yellow&style=plastic)
+<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/pizzaria-toffanetto?style=plastic)</a>
+![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/pizzaria-toffanetto?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/pizzaria-toffanetto?color=yellow&style=plastic)
 
-<h1 align="center">PROJETO BOILERPLATE</h1>
+<h1 align="center">PROJETO PIZZARIA TOFFANETTO</h1>
 
 <br />
 
@@ -21,11 +21,9 @@
 
 # :camera_flash: Screenshots do Projeto
 
-[comment]: <> (![Imagem do projeto]&#40;https://raw.githubusercontent.com/everton-dgn/pomodoro-react/master/screenshots/light.jpg&#41;)
+![Imagem do projeto](https://raw.githubusercontent.com/everton-dgn/pizzaria-toffanetto/master/screenshots/light.jpg)
 
-[comment]: <> (![Imagem do projeto]&#40;https://raw.githubusercontent.com/everton-dgn/pomodoro-react/master/screenshots/dark.jpg&#41;)
-
-[comment]: <> (![Imagem do projeto]&#40;https://raw.githubusercontent.com/everton-dgn/pomodoro-react/master/screenshots/mobi.png&#41;)
+![Imagem do projeto](https://raw.githubusercontent.com/everton-dgn/pizzaria-toffanetto/master/screenshots/mobi.png)
 
 <br />
 
@@ -37,7 +35,7 @@
 
 # :monocle_face: Sobre o Projeto
 
-Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum .
+Este projeto tem o objetivo de agilizar o processo do pedido de pizzas, proporcionando uma experiência melhor para o cliente.
 
 <br />
 
@@ -82,13 +80,13 @@ Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lorem inpsum Lo
 1. Abra o terminal na pasta desejada para clonar o repositório e execute o comando:
 
 ```bash
-git clone https://github.com/everton-dgn/xxxxxxxxxxxxxxxxxxxxx
+git clone https://github.com/everton-dgn/pizzaria-toffanetto
 ```
 
 2. Depois de concluído, execute os seguintes comandos para iniciar o server e será aberto no seu navegador uma aba com o projeto já funcionando:
 
 ```bash
-cd nomeprojeto/
+cd pizzaria-toffanetto/
 ```
 
 Para instalar as dependências:

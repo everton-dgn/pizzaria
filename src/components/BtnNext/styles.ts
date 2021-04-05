@@ -5,6 +5,7 @@ export const ContainerBtn = styled.div<{ center?: string }>`
   margin-bottom: 5rem;
   display: flex;
   justify-content: center;
+  width: 100%;
 
   ${({ center }) =>
     center === undefined &&

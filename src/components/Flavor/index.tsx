@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import * as S from 'components/Flavor/styles'
 import { DataContext } from 'hooks/UseContext'
+import { BtnNext } from 'components/BtnNext'
 
 interface FlavorProps {
   data: [
@@ -26,7 +27,30 @@ interface RecommendedCheckParams {
 }
 
 export const Flavor = ({ data }: FlavorProps) => {
-  const { setPizza1, setPizza2, setPizza3, setPizza4 } = useContext(DataContext)
+  const {
+    pizza1,
+    pizza2,
+    pizza3,
+    pizza4,
+    setPizza1,
+    setPizza2,
+    setPizza3,
+    setPizza4
+  } = useContext(DataContext)
+
+  const [
+    verifyCheckedRecommendation,
+    setVerifyCheckedRecommendation
+  ] = useState([pizza1.checked, pizza2.checked, pizza3.checked, pizza4.checked])
+
+  useEffect(() => {
+    setVerifyCheckedRecommendation([
+      pizza1.checked,
+      pizza2.checked,
+      pizza3.checked,
+      pizza4.checked
+    ])
+  }, [pizza1, pizza2, pizza3, pizza4])
 
   const recommendedCheck = ({
     e,
@@ -115,6 +139,10 @@ export const Flavor = ({ data }: FlavorProps) => {
             </S.ContainerInfo>
           </S.Card>
         ))}
+
+        {verifyCheckedRecommendation.includes(true) && (
+          <BtnNext route={'/etapa-2'} />
+        )}
       </S.ContainerCard>
     </>
   )

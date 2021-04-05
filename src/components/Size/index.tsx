@@ -1,6 +1,7 @@
 import { ChangeEvent, useContext, useState } from 'react'
 import * as S from 'components/Size/styles'
 import { DataContext } from 'hooks/UseContext'
+import { BtnNext } from 'components/BtnNext'
 
 interface SizeProps {
   data: [
@@ -64,6 +65,8 @@ export const Size = ({ data }: SizeProps) => {
             </S.ContainerRadio>
           </S.Card>
         ))}
+
+        {selectedValue && <BtnNext route={'/etapa-3'} />}
       </S.ContainerSize>
     </>
   )

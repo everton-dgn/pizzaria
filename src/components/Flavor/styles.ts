@@ -27,7 +27,7 @@ export const ContainerCard = styled.section`
   margin-top: 3rem;
 `
 
-export const Card = styled.div`
+export const Card = styled.label`
   display: flex;
   flex-direction: row;
   padding: 1.5rem;
@@ -148,7 +148,8 @@ export const ContainerCheckbox = styled.div`
   height: fit-content;
   margin: auto 0.5rem auto -1rem;
 
-  .MuiIconButton-root {
-    color: #7f1d1d;
+  input {
+    width: 1.8rem;
+    height: 1.8rem;
   }
 `

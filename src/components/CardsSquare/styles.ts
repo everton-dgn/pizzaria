@@ -67,8 +67,8 @@ export const ContainerInfo = styled.div<{ bonus: string }>`
   margin-top: 2rem;
   height: 100%;
 
-  ${props =>
-    props.bonus === 'true' &&
+  ${({ bonus }) =>
+    bonus === 'true' &&
     css`
       border: 0.2rem solid ${s.primary};
       border-radius: 0.8rem;

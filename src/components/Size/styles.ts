@@ -68,7 +68,7 @@ export const Title = styled.h3`
   color: #7f1d1d;
   font-size: 2rem;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin: 1rem 0 0 0;
   justify-content: center;
   text-align: center;
 `
@@ -95,12 +95,13 @@ export const RadioContent = styled.label`
   border-radius: 1rem;
   padding: 1.5rem 2rem;
   width: 100%;
-
-  .MuiIconButton-root {
-    color: #7f1d1d;
-  }
 `
 
 export const RadioLabel = styled.div`
   margin: -0.5rem auto 0 auto;
+
+  input {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
 `

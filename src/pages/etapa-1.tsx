@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { TitleSection, Steps, Cart, Flavor, BtnNext } from 'components'
+import { TitleSection, Steps, Cart, Flavor } from 'components'
 import { c } from 'theme'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
@@ -13,7 +13,6 @@ const Etapa1 = ({
       <Cart />
       <c.Container>
         <Flavor data={dataApi.pizzas} />
-        <BtnNext route={'/etapa-2'} />
       </c.Container>
     </>
   )
