@@ -1,7 +1,11 @@
 import React from 'react'
 import * as S from 'components/Steps/styles'
 
-export const Steps = ({ activeStep }: any) => {
+interface StepsProps {
+  activeStep: boolean[]
+}
+
+export const Steps = ({ activeStep }: StepsProps) => {
   return (
     <>
       <S.ContainerSteps>

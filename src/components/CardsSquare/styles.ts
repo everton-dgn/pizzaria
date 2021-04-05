@@ -59,7 +59,7 @@ export const ContainerImg = styled.div`
   }
 `
 
-export const ContainerInfo = styled.div<{ bonus: any }>`
+export const ContainerInfo = styled.div<{ bonus: string }>`
   display: flex;
   flex-direction: column;
   width: 100%;

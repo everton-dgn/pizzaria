@@ -2,11 +2,25 @@ import React from 'react'
 import * as S from 'components/CardsSquare/styles'
 import Link from 'next/link'
 
-export const CardsSquare = ({ data }: any) => {
+interface CardSquareProps {
+  data: [
+    {
+      id: string
+      img: string
+      ingredients: string
+      name: string
+      points: string
+      recommendation: string
+      sizeAndPrice: []
+    }
+  ]
+}
+
+export const CardsSquare = ({ data }: CardSquareProps) => {
   return (
     <>
       <S.ContainerCards>
-        {data.map((el: any) => (
+        {data.map(el => (
           <S.Card key={el.id}>
             <S.ContainerImg>
               <img

@@ -139,6 +139,8 @@ input[type='number'] {
   -moz-appearance: textfield;
   appearance: none;
   -webkit-appearance: textfield;
+  background-color: #fff;
+  border: 0.2rem solid #222;
 `
 
 export const BtnCount = styled.button`

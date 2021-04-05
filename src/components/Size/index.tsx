@@ -1,17 +1,37 @@
-import { useContext, useState } from 'react'
+import { ChangeEvent, useContext, useState } from 'react'
 import * as S from 'components/Size/styles'
 import { DataContext } from 'hooks/UseContext'
 
-export const Size = ({ data }: any) => {
-  const { setSize, setCart } = useContext(DataContext)
-  const [selectedValue, setSelectedValue] = useState('a')
+interface SizeProps {
+  data: [
+    {
+      id: string
+      img: string
+      ingredients: string
+      name: string
+      points: string
+      recommendation: string
+      sizeAndPrice: [
+        {
+          size: string
+          price: string
+          slices: string
+        }
+      ]
+    }
+  ]
+}
 
-  const addCart = (price: any, size: any) => {
+export const Size = ({ data }: SizeProps) => {
+  const { setSize, setCart } = useContext(DataContext)
+  const [selectedValue, setSelectedValue] = useState('')
+
+  const addCart = (price: string, size: string) => {
     setSize([price, size])
     setCart(price)
   }
 
-  const handleChange = (event: any) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value)
   }
 
@@ -19,7 +39,7 @@ export const Size = ({ data }: any) => {
     <>
       <S.TitleComponent>Tamanhos</S.TitleComponent>
       <S.ContainerSize>
-        {data[0].sizeAndPrice.map((el: any) => (
+        {data[0].sizeAndPrice.map(el => (
           <S.Card key={el.size}>
             <S.ContainerRadio>
               <S.RadioContent>
@@ -31,7 +51,6 @@ export const Size = ({ data }: any) => {
                     onChange={handleChange}
                     value={el.size}
                     name={el.size}
-                    // inputProps={{ 'aria-label': el.size }}
                   />
                 </S.RadioLabel>
                 <S.ContainerInfo>

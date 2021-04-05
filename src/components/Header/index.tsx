@@ -7,15 +7,13 @@ export const Header = () => {
       <S.ContainerFluid>
         <S.Nav>
           <S.ContainerCenter>
-            <div>
-              <Link href="/">
-                <a>
-                  <S.Logo>
-                    Pizzaria <em>Toffanetto</em>
-                  </S.Logo>
-                </a>
-              </Link>
-            </div>
+            <Link href="/">
+              <a>
+                <S.Logo>
+                  Pizzaria <em>Toffanetto</em>
+                </S.Logo>
+              </a>
+            </Link>
           </S.ContainerCenter>
         </S.Nav>
       </S.ContainerFluid>

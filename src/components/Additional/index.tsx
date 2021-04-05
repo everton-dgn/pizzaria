@@ -2,7 +2,18 @@ import React, { useContext, useEffect } from 'react'
 import * as S from 'components/Additional/styles'
 import { DataContext } from 'hooks/UseContext'
 
-export const Additional = ({ data }: any) => {
+interface AdditionalProps {
+  data: [
+    {
+      id: string
+      name: string
+      price: string
+      img: string
+    }
+  ]
+}
+
+export const Additional = ({ data }: AdditionalProps) => {
   const {
     adBacon,
     setAdBacon,
@@ -16,7 +27,7 @@ export const Additional = ({ data }: any) => {
     setCart
   } = useContext(DataContext)
 
-  const changeRemoveQtd = (param: any) => {
+  const changeRemoveQtd = (param: string) => {
     switch (param) {
       case 'bacon':
         adBacon > 0 && setAdBacon(adBacon - 1)
@@ -40,7 +51,7 @@ export const Additional = ({ data }: any) => {
     setCart((+size[0] * 100 + 4.99 * 100 * total) / 100)
   }, [adBacon, adCalabreza, adMussarela, adPalmito, setCart, size])
 
-  const changeAddQtd = (param: any) => {
+  const changeAddQtd = (param: string) => {
     const total = adBacon + adCalabreza + adMussarela + adPalmito
     if (total === 10) return
 
@@ -66,7 +77,7 @@ export const Additional = ({ data }: any) => {
     <>
       <S.TitleComponent>Adicionais</S.TitleComponent>
       <S.ContainerMain>
-        {data.map((el: any, i: number) => (
+        {data.map((el, i) => (
           <S.Card key={el.id}>
             <S.ContainerAdditional>
               <S.Box>

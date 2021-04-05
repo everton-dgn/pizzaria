@@ -23,10 +23,10 @@ export const ContainerLine = styled.div`
   margin-bottom: -2.1rem;
 `
 
-export const LineStep = styled.div<{ actived: any }>`
+export const LineStep = styled.div<{ actived: boolean }>`
   flex: 1;
   height: 0.4rem;
-  background-color: ${props => (props.actived ? '#7f1d1d' : '#e6e4f1')};
+  background-color: ${({ actived }) => (actived ? '#7f1d1d' : '#e6e4f1')};
 `
 
 export const ContainerRounded = styled.div`
@@ -36,7 +36,7 @@ export const ContainerRounded = styled.div`
   margin-bottom: 0.6rem;
 `
 
-export const Step = styled.div<{ actived: any }>`
+export const Step = styled.div<{ actived: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;

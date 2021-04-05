@@ -1,14 +1,22 @@
-import React, { useState, createContext } from 'react'
+import React, { useState, createContext, ReactNode, Dispatch } from 'react'
+
+interface ObjectProvider {
+  checked: any
+  name: any
+  size: any
+  recommended: any
+  point: any
+}
 
 interface ChallengeContextData {
-  pizza1: any
-  setPizza1: any
-  pizza2: any
-  setPizza2: any
-  pizza3: any
-  setPizza3: any
-  pizza4: any
-  setPizza4: any
+  pizza1: ObjectProvider
+  setPizza1: Dispatch<React.SetStateAction<ObjectProvider>>
+  pizza2: ObjectProvider
+  setPizza2: Dispatch<React.SetStateAction<ObjectProvider>>
+  pizza3: ObjectProvider
+  setPizza3: Dispatch<React.SetStateAction<ObjectProvider>>
+  pizza4: ObjectProvider
+  setPizza4: Dispatch<React.SetStateAction<ObjectProvider>>
   cart: any
   setCart: any
   size: any
@@ -25,13 +33,25 @@ interface ChallengeContextData {
   setFormData: any
 }
 
+interface DataStorageProps {
+  children: ReactNode
+}
+
 export const DataContext = createContext({} as ChallengeContextData)
 
-export const DataStorage = ({ children }: any) => {
-  const [pizza1, setPizza1] = useState('')
-  const [pizza2, setPizza2] = useState('')
-  const [pizza3, setPizza3] = useState('')
-  const [pizza4, setPizza4] = useState('')
+export const DataStorage = ({ children }: DataStorageProps) => {
+  const objectPizza = {
+    checked: null,
+    name: null,
+    size: null,
+    recommended: null,
+    point: null
+  }
+
+  const [pizza1, setPizza1] = useState(objectPizza)
+  const [pizza2, setPizza2] = useState(objectPizza)
+  const [pizza3, setPizza3] = useState(objectPizza)
+  const [pizza4, setPizza4] = useState(objectPizza)
 
   const [cart, setCart] = useState(false)
   const [size, setSize] = useState([])

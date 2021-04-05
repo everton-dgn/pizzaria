@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { c } from 'theme'
 
-export const ContainerCenter = styled(c.Container)``
+export const ContainerCenter = styled(c.Container)`
+  align-items: center;
+`
 
 export const ContainerFluid = styled.div`
   display: flex;

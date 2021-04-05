@@ -1,7 +1,11 @@
 import * as S from 'components/TitleSection/styles'
 import { c } from 'theme'
 
-export const TitleSection = ({ title }: any) => {
+interface TitleSectionProps {
+  title: string
+}
+
+export const TitleSection = ({ title }: TitleSectionProps) => {
   return (
     <>
       <c.Container>

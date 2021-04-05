@@ -64,15 +64,15 @@ export const ContainerImg = styled.div`
   }
 `
 
-export const ContainerInfo = styled.div<{ bonus: any }>`
+export const ContainerInfo = styled.div<{ bonus: string }>`
   display: flex;
   flex-direction: column;
   margin-left: 1.2rem;
   width: 100%;
   justify-content: start;
 
-  ${props =>
-    props.bonus === 'true' &&
+  ${({ bonus }) =>
+    bonus === 'true' &&
     css`
       border: 0.2rem solid #7f1d1d;
       border-radius: 0.8rem;
@@ -84,8 +84,8 @@ export const ContainerInfo = styled.div<{ bonus: any }>`
     color: #7f1d1d;
     font-weight: 500;
     font-size: 1rem;
-    ${props =>
-      props.bonus === 'true' &&
+    ${({ bonus }) =>
+      bonus === 'true' &&
       css`
         display: flex;
       `};

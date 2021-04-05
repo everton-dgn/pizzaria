@@ -3,7 +3,7 @@ import * as S from 'components/BtnNext/styles'
 import Link from 'next/link'
 
 interface Props {
-  route: any
+  route: string
   text?: string
 }
 

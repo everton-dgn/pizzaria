@@ -1,7 +1,7 @@
 import { useRef, useContext } from 'react'
 import * as S from 'components/Forms/FormData/styles'
 import { Input } from 'components'
-import { Scope } from '@unform/core'
+import { FormHandles, Scope, SubmitHandler } from '@unform/core'
 import * as Yup from 'yup'
 import Router from 'next/router'
 import { DataContext } from 'hooks/UseContext'
@@ -9,16 +9,27 @@ import { useValidate } from 'hooks/UseValidate'
 import { Toast, NotifyError, NotifySuccess } from 'components/Toast'
 import { toast } from 'react-toastify'
 
+interface FormDataUnform {
+  name: string
+  email: string
+  phone: string
+  zipCode: string
+  street: string
+  number: string
+  neighborhood: string
+  city: string
+  state: string
+}
+
 export const FormData = () => {
   const { setFormData } = useContext(DataContext)
 
-  const formRef = useRef(null)
-  // @ts-ignore
-  const schema = useValidate(null)
+  const formRef = useRef<FormHandles>(null)
 
-  const handleSubmit = async (data: any) => {
+  const schema = useValidate()
+
+  const handleSubmit: SubmitHandler<FormDataUnform> = async data => {
     try {
-      // @ts-ignore
       formRef.current?.setErrors({})
 
       await schema.validate(data, { abortEarly: false })
@@ -37,12 +48,11 @@ export const FormData = () => {
       if (err instanceof Yup.ValidationError) {
         const errorMessages = {}
 
-        err.inner.forEach((error: any) => {
+        err.inner.forEach(({ message, path }) => {
           // @ts-ignore
-          errorMessages[error.path] = error.message
+          errorMessages[path] = message
         })
 
-        // @ts-ignore
         formRef.current?.setErrors(errorMessages)
 
         // mostra toast de erro

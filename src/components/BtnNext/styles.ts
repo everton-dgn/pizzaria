@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const ContainerBtn = styled.div<{ center: any }>`
+export const ContainerBtn = styled.div<{ center?: string }>`
   margin-top: 2rem;
   margin-bottom: 5rem;
   display: flex;

@@ -11,7 +11,7 @@ const configToast = {
   progress: undefined
 }
 
-export const NotifyError = (prop1: any, prop2: any) => {
+export const NotifyError = (prop1: string, prop2: string) => {
   toast.error(
     <>
       <span>
@@ -29,7 +29,7 @@ export const NotifyError = (prop1: any, prop2: any) => {
   )
 }
 
-export const NotifySuccess = (prop1: any, prop2: any) => {
+export const NotifySuccess = (prop1: string, prop2: string) => {
   toast.success(
     <>
       <span>

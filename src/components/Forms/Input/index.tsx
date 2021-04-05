@@ -2,7 +2,16 @@ import { useEffect, useRef } from 'react'
 import * as S from 'components/Forms/Input/styles'
 import { useField } from '@unform/core'
 
-export const Input = ({ name, id, placeholder, ...rest }: any) => {
+interface InputProps {
+  name: string
+  id: string
+  placeholder: string
+  label: string
+  type: string
+  autoFocus?: boolean
+}
+
+export const Input = ({ name, id, placeholder, ...rest }: InputProps) => {
   const inputRef = useRef(null)
 
   const { fieldName, registerField, error, clearError } = useField(name)
@@ -16,8 +25,7 @@ export const Input = ({ name, id, placeholder, ...rest }: any) => {
   }, [fieldName, registerField])
 
   const clearField = () => {
-    // @ts-ignore
-    if (error?.length > 0) clearError()
+    if (error !== undefined) clearError()
   }
 
   return (
